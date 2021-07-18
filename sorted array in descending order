@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int a[]=new int [n];
+        for(int i=0;i<a.length;i++)//for accepting the input from user//
+        {
+            a[i]=scan.nextInt();
+        }
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=i+1;j<a.length;j++)
+            {
+                if(a[i]<a[j])
+                {   int temp=0;
+                    temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        for(int i=0;i<n;i++)
+       {
+           System.out.print(a[i]+" ");
+       }
+    }
+       
+}
