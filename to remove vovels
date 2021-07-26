@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String str=scan.nextLine();
+        char ch[]=str.toCharArray();
+        for(int i=0;i<str.length();i++)
+        {
+            if(ch[i]=='A'||ch[i]=='a'||ch[i]=='E'|| ch[i]=='e'||ch[i]=='I'||ch[i]=='i'||ch[i]=='o'||ch[i]=='O'||ch[i]=='u'||ch[i]=='U')
+            continue;
+            else
+            System.out.print(ch[i]);
+            
+        }
+    }
+}
