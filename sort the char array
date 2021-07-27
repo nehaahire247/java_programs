@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String str=scan.nextLine();
+        char ch[]=str.toCharArray();
+        char temp;
+        for(int i=0;i<str.length();i++)
+        {   for(int j=i+1;j<str.length();j++)
+        {
+            if(ch[j]<ch[i])
+            {
+                temp=ch[j];
+                ch[j]=ch[i];
+                ch[i]=temp;
+            }
+        }
+        }
+        for(int k=0;k<str.length();k++)
+        {
+            System.out.print(ch[k]);
+        }
+    }
+}
