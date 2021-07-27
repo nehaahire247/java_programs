@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String str=scan.nextLine();
+        char ch[]=str.toCharArray();
+        int count=0;
+        int count1=0;
+        int count2=0;
+        int count3=0;
+        
+        for(int i=0;i<str.length();i++)
+        {
+            if(ch[i]=='a'||ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u'||ch[i]=='A' ||ch[i]=='E'||ch[i]=='I'||ch[i]=='O'||ch[i]=='u')
+            count++;
+            else
+            if(ch[i]>='a' &&ch[i]<='z')
+            count1++;
+        
+            else if(ch[i]>='0' && ch[i]<='9')
+            count2++;
+            else if((ch[i]<='A' && ch[i]<='Z') ||(ch[i]>='a' && ch[i]<='z')|| (ch[i]>='0' && ch[i]<='9') ||ch[i]==' ')
+            continue;
+            else
+            count3++;
+
+            
+        }
+                    System.out.print(count+" ");
+                    System.out.print(count1+" ");
+                    System.out.print(count2+" ");
+                     System.out.print(count3+" ");
+                    
+                    
+    }
+}
