@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String str=scan.nextLine();
+        int count=1;
+        char ch[]=str.toCharArray();
+        for(int i=0;i<str.length();i++)
+        {   if(ch[i]!='0')
+            {
+            for(int j=i+1;j<str.length();j++)
+            {
+                if(ch[i]==ch[j]  &&ch[i]!=' ')
+                {
+                    count++;
+                    ch[j]='0';
+                }
+                 
+            }
+             System.out.println(ch[i]+"-"+count);  
+            }
+             
+        }
+
+    }
+}
