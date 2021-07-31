@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String str=sca.nextLine();
+        String result=" ";
+        int count=0;
+         for(int i=0;i<i<str.length();i++)
+         {   if(ch[i]!='0')
+         {
+             for(int j=i+1;j<str.length();j++)
+             {
+                 if(ch[i]==ch[j])
+                 count++;
+                 ch[j]='0';
+             }
+             result=result+'count';
+         }
+             
+         }
+         char ch[]=result.tocharArray(); //to get the number which is repeated most
+         Arrays.Sort(ch);
+         int length=ch.length();
+         int total=(str.length())-ch.length()-1; //we are substrcting the no which is repeated most from the entire string length//
+         System.out.println(total);
+         
+    }
+}
