@@ -1,0 +1,20 @@
+import java.util.Scanner;
+import java.util.Arrays;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String a=scan.nextLine();
+        String b=scan.nextLine();
+        char[] a1=a.toLowerCase().toCharArray();
+        char[] b1=b.toLowerCase().toCharArray();
+        Arrays.sort(a1);
+        Arrays.sort(b1);
+            if(Arrays.equals(a1,b1))
+            {
+              System.out.println("anagrams");
+                
+            }
+            else
+             System.out.println("not anagrams");
+    }
+}
