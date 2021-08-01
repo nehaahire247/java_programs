@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String str=scan.nextLine();
+        int count=1;
+        for(int i=0;i<str.length();i++) //for calculating the number of words in a string
+        {
+            //char ch=str.charAt(i);
+            if(str.charAt(i)==' ')
+            count++;
+        }
+        String[] words=new String [count];
+        String temp="";
+        int k=0;
+        for(int i=0;i<str.length();i++) //storing each word in an string array//
+        {
+            if(str.charAt(i)!=' ')
+            temp=temp+str.charAt(i);
+            else if(temp.length()>0)
+            {
+                words[k]=temp;
+                temp="";
+                k++;
+            }
+        }
+        words[k]=temp;
+        int mindex=-1;
+        int min=Integer.MAX_VALUE;
+        for(int i=0;i<words.length;i++)  //for calculating min length of word and storing its index as well as its value//
+        {
+            if(words[i].length()<min)
+            {
+                min=words[i].length();
+                mindex=i;
+            }
+            
+        }
+        System.out.println(words[mindex]);
+    }
+}
