@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String str=scan.nextLine();
+        int sum=0;
+        int n;
+        String res="";
+        for(int i=0;i<str.length();i++)
+        {
+            char ch=str.charAt(i);
+            if((ch >='a' && ch<='z') ||  ( ch>='A' && ch<='Z') || ch==' ')
+            res=res+ch;
+            else if(ch>='0'  && ch<='9')
+            sum=sum+Character. getNumericValue(ch);;
+        }
+        res=res+sum;
+        System.out.println(res);
+    }
+}
