@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java .lang.*;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String str=scan.nextLine();
+        char ch[]=str.toCharArray();
+        String result="";
+        // char ch1;
+        for(int i=0;i<str.length();i++)
+        {
+            if(Character.isLowerCase(ch[i]))
+            result=result+Character.toUpperCase(ch[i]);
+            else 
+             if(Character.isUpperCase(ch[i]))
+            result=result+Character.toLowerCase(ch[i]);
+            else
+            result=result+' ';
+        }
+        System.out.print(result);
+        
+    }
+}
