@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class demo{
+    long sum=0;
+    void triangular_series(int n)
+    {    
+        for(int i=1;i<=n;i++)
+        {   sum=sum+i;
+            System.out.print(sum+" ");
+            
+        }
+    }
+    
+}
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+         int n=scan.nextInt();
+         demo ref=new demo ();
+         int m;
+         ref.triangular_series(n);
+    }
+}
