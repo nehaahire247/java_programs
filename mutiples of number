@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class multiple{
+    private int n;
+    private int a[];
+    private int r[];
+    static int [] call()
+    {   Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int r[]=new int[n];
+        int a[]=new int [n];
+        int l=scan.nextInt();
+        int multi=0;
+        for(int i=0;i<l;i++)
+        {
+            multi=multi+n;
+            r[i]=multi;
+        }
+        return r;
+    }
+    
+}
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        multiple m=new multiple();
+        int result;
+        int a[]=m.call();
+         for(int i=0;i<a.length;i++)
+         {
+             System.out.println(a[i]);
+         }
+        }
+    }
