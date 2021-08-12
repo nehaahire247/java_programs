@@ -1,0 +1,56 @@
+/*
+Write a static method named range that takes an array of integers as a parameter and returns the range of values contained in the array. The range of an array is defined to be one more than the difference between its largest and smallest element.
+
+Input Format:
+
+First-line contains a single integer N
+
+The next line contains N space-separated integer values
+
+Output Format:
+
+Single integer value representing a range of array
+
+
+Sample input:
+
+6
+
+10 20 30 45 78 90
+
+Sample output:
+
+81
+*/
+import java.util.Scanner;
+class array{
+    private int n;
+    private int a[];
+    static int call()
+    {
+        Scanner scan=new Scanner (System.in);
+        int n=scan.nextInt();
+        int a[]=new int[n];
+        int min=Integer.MAX_VALUE;
+        int max=0;
+        for(int i=0;i<a.length;i++)
+        {   a[i]=scan.nextInt();
+            if(a[i]<min)
+            min=a[i];
+            if(a[i]>max)
+            max=a[i];
+        }
+        int d=(max-min)+1;
+        return d;
+    }
+}
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        array m=new array();
+        int result;
+        result= m.call();
+        System.out.println(result);
+    }
+}
+
