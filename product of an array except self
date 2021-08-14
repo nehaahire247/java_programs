@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class fun{
+    void call()
+    {   Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<a.length;i++)
+        {
+            a[i]=scan.nextInt();
+        }
+        //int mult=1;
+        String str=" ";
+        for(int i=0;i<a.length;i++)
+        {   int mul=1;
+            for(int j=0;j<a.length;j++)
+        {
+            if(i==j)
+            continue;
+            else
+            mul=mul*a[j];
+        }
+        str=str+mul+' ';
+        }
+        System.out.println(str);
+    }
+    
+}
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        fun m=new fun();
+        m.call();
+    }
+}
