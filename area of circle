@@ -1,0 +1,10 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        float pie=3.142f;
+        float r =scan.nextInt();
+        double area=pie*r*r;
+        System.out.format("%.4f",area);
+    }
+}
