@@ -1,0 +1,99 @@
+/*
+You are provided an array A of the size N that contains non-negative integers. Your task is to determine whether the number that is formed by selecting the last digit of all the N numbers is divisible by 10.
+
+
+
+Input format
+
+First line: A single integer N denoting the size of array A
+Second line: N space-separated integers.
+Output format
+
+If the number is divisible by 10, then print Yes. Otherwise, print No.
+
+
+
+Sample Input:
+
+5
+
+85 25 65 21 84
+
+Sample Output:
+
+No
+
+*/
+You are provided an array A of the size N that contains non-negative integers. Your task is to determine whether the number that is formed by selecting the last digit of all the N numbers is divisible by 10.
+
+
+
+Input format
+
+First line: A single integer N denoting the size of array A
+Second line: N space-separated integers.
+Output format
+
+If the number is divisible by 10, then print Yes. Otherwise, print No.
+
+
+
+Sample Input:
+
+5
+
+85 25 65 21 84
+
+Sample Output:
+
+No
+
+You are provided an array A of the size N that contains non-negative integers. Your task is to determine whether the number that is formed by selecting the last digit of all the N numbers is divisible by 10.
+
+
+
+Input format
+
+First line: A single integer N denoting the size of array A
+Second line: N space-separated integers.
+Output format
+
+If the number is divisible by 10, then print Yes. Otherwise, print No.
+
+
+
+Sample Input:
+
+5
+
+85 25 65 21 84
+
+Sample Output:
+
+No
+
+import java.util.Scanner;
+class Solution{
+    public static boolean call(int n,int []a)
+    {
+        if(a[a.length-1]%10==0)
+        return true;
+        else
+        return false;
+    }
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        Solution m=new Solution();
+        int n=scan.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<a.length;i++)
+        {
+            a[i]=scan.nextInt();
+        }
+        if(m.call(n,a)==true)
+        System.out.println("Yes");
+        else
+        System.out.println("No");
+        
+    }
+}
