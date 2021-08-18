@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();//for first input//
+        int m=scan.nextInt();
+        int lcm,max;
+        if(n>m)
+        {
+            max=n;
+        }
+        else
+        max=m;
+        while(true)
+        {
+            if(max%n==0 && max%m==0)
+            {
+                lcm=max;
+                break;
+            }
+            max=max+1;
+        }
+        System.out.println(lcm);
+    }
+}
