@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class solution
+{   public static String call(String s){
+    String r=" ";
+    for(int i=0;i<s.length();i++){
+        int c=s.charAt(i);
+        if(c>='a'  && c<='z'){
+            r=r+ (char)(c-32);
+        }
+        if(c>='A' && c<='Z'){
+            r=r+(char)(c+32);
+        }
+    }
+    return r;
+}
+    public static void main(String...args)
+    {
+        Scanner scan = new Scanner(System.in);
+        String str=scan.nextLine();
+        System.out.println(call(str));
+        
+    }
+    
+}
