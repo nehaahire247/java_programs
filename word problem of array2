@@ -1,0 +1,71 @@
+Goki recently had a breakup, so he wants to have some more friends in his life. Goki has N people with who he can be friends with, so he decides to choose among them according to their skills set Yi(1<=i<=n). He wants atleast X skills in his friends.
+Help Goki find his friends.
+
+
+
+Input Format:
+
+First line of the input contains an integer N denoting the number of people.
+
+Next line contains a single integer X - denoting the minimum skill required to be Goki's friend. 
+
+Next n lines contain one integer Y - denoting the skill of an ith person.
+
+
+
+Output Format:
+
+For each person print if he can be friend with Goki. 'YES' (without quotes) if he can be friends with Goki else 'NO' (without quotes).
+
+
+Sample Input:
+
+5
+
+100
+
+110
+
+130
+
+90
+
+100
+
+45
+
+Sample Output:
+
+YES
+
+YES
+
+NO
+
+YES
+
+NO
+import java.util.Scanner;
+class Solution
+{
+    public static void call(int a[],int n,int r){
+         for(int i=0;i<a.length;i++){
+             if(a[i]>=r)
+             System.out.println("YES");
+             else
+             System.out.println("NO");
+         }
+    }
+    public static void main(String...args)
+    {
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int a[]=new int[n];
+        int r=scan.nextInt();
+        for(int i=0;i<a.length;i++){
+         a[i]=scan.nextInt();
+        }
+        call(a,n,r);
+        
+    }
+}
