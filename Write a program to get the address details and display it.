@@ -1,0 +1,117 @@
+Write a program to get the address details and display it.
+
+Create a class named Address with the following public member variables
+
+ 
+
+Data Type
+
+Variable Name
+
+String
+
+street
+
+String
+
+city
+
+int
+
+pincode
+
+String
+
+country
+
+
+The Address class has the following methods 
+ 
+
+Method Name
+
+Function
+
+displayAddress()
+
+To display all the details.
+
+ 
+
+Create a Main class to include the Main method.
+
+In the Main method
+
+Obtain the details of the Address.
+
+Create an object for Address class and assign the values to the attribute
+
+Call the method displayAddress() in Main class
+
+Note :
+
+1.Strictly adhere to the object-oriented specifications given in the problem statement.
+
+
+
+Sample Input:
+
+13,RockfortStreet
+
+Chennai
+
+654035
+
+India
+
+Sample Output:
+
+street: 13,Rockfortstreet
+
+city: Chennai
+
+pincode: 654035
+
+country: India
+
+
+VPL
+Previous activity
+Jump to...
+Jump to...
+Next activity
+Tap Academy Pvt Ltd
+ https://thetapacademy.com/  9844441203  online@thetapacademy.com
+    import java.util.Scanner;
+class address{
+       private String street;
+       private String city;
+       private int pincode;
+       private String country;
+       address(String street,String city,int pincode,String country){
+           this.street=street;
+           this.city=city;
+           this.pincode=pincode;
+           this.country=country;
+       }
+       public void displayaddress()
+       {
+           System.out.println("street:"+street);
+           System.out.println("city:"+city);
+           System.out.println("pincode:"+pincode);
+           System.out.println("country:"+country);
+       }
+}
+class Solution
+{
+    public static void main(String...args)
+    {
+        Scanner scan = new Scanner(System.in);
+        String street=scan.nextLine();
+        String city=scan.nextLine();
+        int pincode=scan.nextInt();
+        String country=scan.next();
+        address s=new address(street,city,pincode,country);
+        s.displayaddress();
+    }
+}
