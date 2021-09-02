@@ -1,0 +1,49 @@
+Given two strings of equal length, you have to tell whether they both strings are identical.
+
+Two strings S1 and S2 are said to be identical, if any of the permutation of string S1 is equal to the string S2. See Sample explanation for more details.
+
+Input Format :
+
+First line, contains an intger 'T' denoting no. of test cases.
+Each test consists of a single line, containing two space separated strings S1 and S2 of equal length.
+Output Format:
+
+For each test case, if any of the permutation of string S1 is equal to the string S2 print YES else print NO.
+
+Sample Input:
+
+3
+sumit mitsu
+ambuj jumba
+abhi hibb
+Sample Output:
+YES
+YES
+NO
+
+import java.util.Scanner;
+import java.util.Arrays;
+class Solution
+{
+    public static void main(String...args)
+    {
+        Scanner scan = new Scanner(System.in);
+        int t=scan.nextInt();
+        for(int i=0;i<t;i++)
+        {
+            String s1=scan.next();
+            char ch1 []=s1.toCharArray();
+            String s2=scan.next();
+            char ch2 []=s2.toCharArray();
+            Arrays.sort(ch1);
+            Arrays.sort(ch2);
+            String r1=new String(ch1);
+            String r2=new String(ch2);
+            if (r1.equals(r2))    
+            System.out.println("YES");
+            else
+            System.out.println("NO");
+        }
+        
+    }
+}
