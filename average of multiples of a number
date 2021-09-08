@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Solution{
+    public static int average(int n, int a){
+        int p=n;
+        int sum=0;
+        for(int i=1;i<=a;i++)
+        {
+            sum=sum+p*i;
+        }
+        return sum/a;
+    }
+    public static void main (String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int a=scan.nextInt();
+        System.out.println(average(n,a));
+    }
+}
