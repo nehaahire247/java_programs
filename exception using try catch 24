@@ -1,0 +1,82 @@
+Write a program that takes as input the size of the array and the elements in the array. The program then asks the user to enter a particular index and prints the element at that index.
+
+This program may generate Array Index Out Of Bounds Exception. Use exception handling mechanisms to handle this exception. In the catch block, print the class name of the exception thrown.
+
+ 
+
+Input Format:
+
+First-line contains a number of elements in the array
+
+second line contains n space-separated integer values
+
+The next line contains integer value representing index of the array element you want to access
+
+Output Format:
+
+Refer sample output
+
+ 
+
+Sample Input:
+
+3
+
+20 90 4
+
+2
+
+Sample Output:
+
+4
+
+The array element successfully accessed
+
+ 
+
+Sample Input1:
+
+3
+
+20 90 4
+
+6
+
+Sample Output1:
+
+java.lang.ArrayIndexOutOfBoundsException
+
+
+ answer
+ --->>
+import java.util.Scanner;
+import java.util.InputMismatchException;
+class Solution{
+   /* public static void call(int [] a)
+    {
+        System.out.println(a[i])
+    } */
+    public static void main (String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=scan.nextInt();
+        }
+        try{
+          int t=scan.nextInt();
+          System.out.println(a[t]);
+          System.out.println("The array element successfully accessed");
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("java.lang.ArrayIndexOutOfBoundsException");
+        }
+        catch(InputMismatchException ex)
+        {
+            System.out.println("input mismatch exception");
+        }
+        
+    }
+}
