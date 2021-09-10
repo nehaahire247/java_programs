@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class no_of_non_repeated_digits{
+    public static void main(String[] args)
+    {
+        Scanner scan=new Scanner(System.in);
+        int n1=scan.nextInt();
+        int n2=scan.nextInt();
+        int k=0;
+        for(int i=n1;i<=n2;i++)
+        {
+            if(i%11==0)
+            continue;
+            else
+            k++;
+        }
+        System.out.println(k);
+    }
+}
+for exmple
+for n1=11
+for n2=15
+here 11 11 is repeated hence we are not counting it  12,13,14,15 we will count therfore count=4
