@@ -1,0 +1,56 @@
+question 
+Nezzar and Rezzan are playing a game. Nezzar gave Rezzan an array A consisting of N integers. To win the game, Rezzan has to correctly tell whether it is possible to divide the entire array A into pairs such that the sum of each pair is even. If It is possible to divide the entire array A into pairs where each pair sum is even, Rezzan will say 'Yes' to Nezzar otherwise he will say 'No'. Rezzan got stuck in the problem, You being a friend of Rezzan help him find the answer
+
+
+
+Input Format:
+
+First line contains N, representing size of the array
+
+Next N space separated integer value represents elements of an array
+
+Output Format:
+
+Print Yes If It is possible to divide the entire array A into pairs where each pair sum is even else No
+
+
+
+Sample Input:
+
+5
+
+1 2 3 4 5
+
+Sample Output:
+
+No
+
+answer
+--->>>
+    
+import java.util.Scanner;
+class Solution{
+    public static void call(int a[],int n)
+    {
+        int count=0;
+       for(int i=0;i<a.length-1;i++)
+       {
+           if((a[i]+a[i+1])%2==0)
+           count++;
+       }
+       if(count==n/2 && n%2==0)
+       System.out.println("YES");
+       else
+       System.out.println("NO");
+    }
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<a.length;i++)
+        {
+            a[i]=scan.nextInt();
+        }
+        call(a,n);
+    }
+}
