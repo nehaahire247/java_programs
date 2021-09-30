@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<String>al=new ArrayList<String>();
+        String r;
+		do{
+		    String s=scan.next();
+		    al.add(s);
+		    r=scan.next();
+		}while(r.equalsIgnoreCase("yes"));
+		System.out.println(al);
+    }
+
+}
