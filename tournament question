@@ -1,0 +1,29 @@
+ 1 2 3 4---> first compare first and second find highest then compare 3rd and 4th store highest if these two numbers are are first and second highest of array list then print yes else print no
+import java.util.Scanner;
+class tournament_question{
+    public static void main(String[] args)
+    {
+        Scanner scan=new Scanner(System.in);
+    int a[]=new int[4];
+    for(int j=0;j<a.length;j++)
+    {
+        a[j]=scan.nextInt();
+    }
+    int first=0,second=0;
+    for(int i=0;i<a.length;i++)
+    {
+        if(a[i]>first)   //for finding first and second highest
+        first=a[i];
+        else if(a[i]>second)
+        second=a[i];
+    }
+    //System.out.println(first);
+    if((first==a[0]  ||  first==a[1]) &&(second==a[2] || second==a[2]) )
+    System.out.println("yes");
+    else if((first==a[1]  ||  first==a[2]) &&(second==a[0] || second==a[1]) )
+    System.out.println("yes");
+    else
+    System.out.println("no");
+    }
+    
+}
