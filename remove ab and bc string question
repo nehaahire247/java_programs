@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class removinga_b_c{
+    public static void main(String[] args)
+    {
+        Scanner scan=new Scanner(System.in);
+        String s=scan.next();
+        int ca=0,cb=0,cc=0;
+        for(int i=0;i<s.length();i++)
+        {
+            char ch=s.charAt(i);
+            if(ch=='a')
+            ca++;
+            if(ch=='b')
+            cb++;
+            if(ch=='c')
+            cc++;
+        }
+        if(ca>cb)
+        System.out.println("no");
+        else {
+            cb=cb-ca;
+            if(cb==cc)
+            System.out.println("yes");
+            else
+            System.out.println("no");
+        }
+
+        
+    
+    }
+    
+}
