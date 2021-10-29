@@ -1,0 +1,50 @@
+import java.util.Scanner;
+//import java.util.function.DoubleFunction;
+import java.lang.Math;
+class padding_d_to_b{
+    public static int[] decimal(int n){   //decimal to binary conversion
+        int binary[]=new int[1000];
+        int i=0;
+        while(n>0){
+            binary[i]=n%2;
+            n=n/2;
+            i++;
+        }
+        int b[]=new int[i];
+        for(int j=i-1;j>=0;j--){   //for reverse traversing the array
+            b[j]=binary[j];
+        }
+        return b;
+    }
+    public static int call(int n){    //binary to decimal
+        int decimal=0;
+        int i=0;
+        while(n!=0){
+            int temp=n%10;
+            decimal+=temp*(Math.pow(2,i));
+            i++;
+        }
+        return n;
+    }
+    public static void main(String[] args)
+    {
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int b[]=decimal(n);
+        for(int i=0;i>=b.length;i++){
+            System.out.println(b[i]);
+        }
+        int k=b.length-1;
+        if(k<8){   //if length is less than 8 then add 0 to the end 
+            b[k++]=0;
+        }
+        int number=0;
+        for(int i=0;i<b.length;i++){  //to convert array to integer
+            number=(number+b[i])*10;
+        }
+        System.out.println(call(number));  //for converting binary to decimal
+
+        
+    }
+
+}
