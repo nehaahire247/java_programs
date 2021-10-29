@@ -1,0 +1,56 @@
+Write a program to store the strings entered by the user as keys and the number of vowels present inside the string as values inside the hashmap.
+
+Input Format:
+
+First-line contains integer N representing a number of Strings to be entered into the hashmap.
+
+Next N lines contain strings to be stored
+
+Output Format:
+
+print key-value pair present inside the HashMap.
+
+
+
+Sample Input:
+
+4
+
+tapacademy
+
+rooman
+
+java
+
+coding
+
+Sample Output:
+
+{rooman=3, coding=2, tapacademy=4, java=2}
+
+
+
+import java.util.*;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        HashMap<String,Integer>h=new HashMap<String,Integer>();
+        int n=scan.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            String s=scan.next();
+            int count=0;
+            for(int j=0;j<s.length();j++){
+                char ch=s.charAt(j);
+                if(ch=='a' || ch=='e' || ch=='i' ||ch=='o' || ch=='u')
+                {
+                    count++;
+                }
+            }
+            System.out.println(count);
+            h.put(s,count);
+            
+        }
+        System.out.println(h);
+    }
+}
